@@ -24,7 +24,7 @@ export const connectDB = async(
         entities: [PostsEntity, UsersEntity]
     })
 
-    await connection.synchronize(true)
+    await connection.synchronize(false)
     .then(() => console.log('synchronized! with DB'.green.bold))
     .catch(() => console.error('Faild to sync with DB'.red.bold))
     
